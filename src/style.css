@@ -1,0 +1,13 @@
+.DottedBox {
+   margin: 40px;
+   border: 5px dotted pink;
+}
+
+.DottedBox_content {
+   text-align: center;
+
+}
+
+.DottedBox_content li {
+   list-style-type: none;
+}
