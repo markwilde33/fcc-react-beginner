@@ -6,6 +6,7 @@ import "./style.css";
 
 // import component
 import MyInfo from "./components/MyInfo";
+import App from "./App";
 
 // ReactDom.render(What do I want to render, where do I want to render it);
-ReactDom.render(<MyInfo />, document.getElementById("root"));
+ReactDom.render(<App />, document.getElementById("root"));
