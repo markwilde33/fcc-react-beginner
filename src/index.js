@@ -5,7 +5,6 @@ import ReactDom from "react-dom";
 import "./style.css";
 
 // import component
-import MyInfo from "./components/MyInfo";
 import App from "./App";
 
 // ReactDom.render(What do I want to render, where do I want to render it);
