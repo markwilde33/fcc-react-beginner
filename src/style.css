@@ -2,6 +2,7 @@ body {
    margin: 0;
 }
 
+/* navbar styles */
 .navbar {
    height: 100px;
    background-color: #333;
@@ -14,9 +15,33 @@ body {
    align-items: center;
 }
 
-
+/* todo-item styles */
 .todo-par {
    font-weight: 600;
    background-color: bisque;
    color: crimson;
+}
+
+/* contact styles */
+.contacts {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.contact-card {
+   flex-basis: 250px;
+   margin: 20px;
+}
+
+.contact-card>img {
+   width: 100%;
+   height: auto;
+}
+
+.contact-card>h3 {
+   text-align: center;
+}
+
+.contact-card>p {
+   font-size: 12px;
 }
