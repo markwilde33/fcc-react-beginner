@@ -24,13 +24,17 @@ body {
 
 /* contact & joke styles */
 .contacts,
-.jokes {
+.jokes,
+.products {
    display: flex;
    flex-wrap: wrap;
+   background-color: #9fc4aa;
+   color: #ffffff;
 }
 
 .contact-card,
-.joke-card {
+.joke-card,
+.product-card {
    flex-basis: 250px;
    margin: 20px;
 }
@@ -41,7 +45,8 @@ body {
 }
 
 .contact-card>h3,
-.joke-card>h3 {
+.joke-card>h3,
+.product-card {
    text-align: center;
 }
 
