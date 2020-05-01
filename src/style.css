@@ -13,3 +13,10 @@ body {
    justify-content: center;
    align-items: center;
 }
+
+
+.todo-par {
+   font-weight: 600;
+   background-color: bisque;
+   color: crimson;
+}
