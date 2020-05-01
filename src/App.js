@@ -9,28 +9,39 @@ function App() {
   return (
     <div className="contacts">
       <ContactCard
-        name="Bill"
-        imgUrl="http://placekitten.com/400/298"
-        phone="018490456"
-        email="bill@gmail.com"
+        contact={{
+          name: "Mr. Whiskerson",
+          imgUrl: "http://placekitten.com/300/200",
+          phone: "(212) 555-1234",
+          email: "mr.whiskaz@catnap.meow",
+        }}
       />
+
       <ContactCard
-        name="Bob"
-        imgUrl="http://placekitten.com/400/300"
-        phone="018490455"
-        email="bob@gmail.com"
+        contact={{
+          name: "Fluffykins",
+          imgUrl: "http://placekitten.com/400/200",
+          phone: "(212) 555-2345",
+          email: "fluff@me.com",
+        }}
       />
+
       <ContactCard
-        name="Berry"
-        imgUrl="http://placekitten.com/400/301"
-        phone="018490450"
-        email="berry@gmail.com"
+        contact={{
+          name: "Destroyer",
+          imgUrl: "http://placekitten.com/400/300",
+          phone: "(212) 555-3456",
+          email: "ofworlds@yahoo.com",
+        }}
       />
+
       <ContactCard
-        name="Baba"
-        imgUrl="http://placekitten.com/400/297"
-        phone="018490451"
-        email="baba@gmail.com"
+        contact={{
+          name: "Felix",
+          imgUrl: "http://placekitten.com/200/100",
+          phone: "(212) 555-4567",
+          email: "thecat@hotmail.com",
+        }}
       />
     </div>
   );
