@@ -22,13 +22,15 @@ body {
    color: crimson;
 }
 
-/* contact styles */
-.contacts {
+/* contact & joke styles */
+.contacts,
+.jokes {
    display: flex;
    flex-wrap: wrap;
 }
 
-.contact-card {
+.contact-card,
+.joke-card {
    flex-basis: 250px;
    margin: 20px;
 }
@@ -38,7 +40,8 @@ body {
    height: auto;
 }
 
-.contact-card>h3 {
+.contact-card>h3,
+.joke-card>h3 {
    text-align: center;
 }
 

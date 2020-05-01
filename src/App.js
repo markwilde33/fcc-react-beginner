@@ -4,43 +4,39 @@ import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import TodoItem from "./components/TodoItem";
 import ContactCard from "./components/ContactCard";
+import Jokes from "./components/Jokes";
 
 function App() {
   return (
-    <div className="contacts">
-      <ContactCard
-        contact={{
-          name: "Mr. Whiskerson",
-          imgUrl: "http://placekitten.com/300/200",
-          phone: "(212) 555-1234",
-          email: "mr.whiskaz@catnap.meow",
+    <div className="jokes">
+      <Jokes
+        joke={{
+          question: "What's the best thing about Switzerland?",
+          punchline: "I don't know, but the flag is a big plus.",
         }}
       />
-
-      <ContactCard
-        contact={{
-          name: "Fluffykins",
-          imgUrl: "http://placekitten.com/400/200",
-          phone: "(212) 555-2345",
-          email: "fluff@me.com",
+      <Jokes
+        joke={{
+          question: "Helvetica and Times New Roman walk into a bar.",
+          punchline:
+            "Get out of here!\" shouts the bartender. We don't serve your type.",
         }}
       />
-
-      <ContactCard
-        contact={{
-          name: "Destroyer",
-          imgUrl: "http://placekitten.com/400/300",
-          phone: "(212) 555-3456",
-          email: "ofworlds@yahoo.com",
+      <Jokes
+        joke={{
+          question: "Hear about the new restaurant called Karma?",
+          punchline: "There’s no menu: You get what you deserve.",
         }}
       />
-
-      <ContactCard
-        contact={{
-          name: "Felix",
-          imgUrl: "http://placekitten.com/200/100",
-          phone: "(212) 555-4567",
-          email: "thecat@hotmail.com",
+      <Jokes
+        joke={{
+          question: "Did you hear about the claustrophobic astronaut?",
+          punchline: "He just needed a little space.",
+        }}
+      />
+      <Jokes
+        joke={{
+          punchline: "I ate a clock yesterday, it was very time-consuming.",
         }}
       />
     </div>
