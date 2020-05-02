@@ -1,20 +1,17 @@
 import React from "react";
 
-// function App(props) {
-//     return (
-//         <div>
-//             <h1>{props.whatever}</h1>
-//         </div>
-//     )
-// }
-
 class App extends React.Component {
-  yourMethodHere() {}
+  constructor() {
+    super();
+    this.state = {
+      answer: "Yes",
+    };
+  }
 
   render() {
     return (
       <div>
-        <h1>{this.props.whatever}</h1>
+        <h1>Is state important to know? {this.state.answer}</h1>
       </div>
     );
   }
