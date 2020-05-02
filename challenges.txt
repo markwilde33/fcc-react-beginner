@@ -70,6 +70,13 @@ Challenge: Using the array map method, render a child component for each todo it
 
 
 Challenge 7
+
 Class based component practice
 1. Convert all 3 components to be class-based
 2. Fix the small bug
+
+
+Challenge 8
+
+// Given an incomplete class-based component without a constructor, 
+// add a constructor and initialize state to fix the broken component.
