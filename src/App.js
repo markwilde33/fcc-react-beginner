@@ -1,20 +1,25 @@
+// working with event handling in react
+
 import React from "react";
-import TodoItem from "./components/TodoItem";
-import todosData from "./components/todosData";
+
+function onClick() {
+  console.log("say hello to my little friend");
+}
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      todos: todosData,
-    };
-  }
-
   render() {
-    const todoItems = this.state.todos.map((item) => (
-      <TodoItem key={item.id} item={item} />
-    ));
-    return <div className="todo-list">{todoItems}</div>;
+    return (
+      <div>
+        <img
+          onMouseOver={() => console.log("Bill is a good man")}
+          src="https://www.fillmurray.com/200/100"
+          alt="Bill Murray"
+        />
+        <br />
+        <br />
+        <button onClick={onClick}>Click me</button>
+      </div>
+    );
   }
 }
 
