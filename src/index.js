@@ -5,42 +5,42 @@ import ReactDom from "react-dom";
 import "./style.css";
 
 // import component
-import App from "./App";
-
-// #1
-function App() {
-  return (
-    <div>
-      <Header />
-      <Greeting />
-    </div>
-  );
-}
+// import App from "./App";
 
 // #2
-function Header(props) {
-  return (
-    <header>
-      <p>Welcome, {props.username}!</p>
-    </header>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header username="Clarice" />
+        <Greeting />
+      </div>
+    );
+  }
+}
+// #2
+class Header extends React.Component {
+  render() {
+    return <p>Welcome, {this.props.username}!</p>;
+  }
 }
 
 // #3
-function Greeting() {
-  const date = new Date();
-  const hours = date.getHours();
-  let timeOfDay;
+class Greeting extends React.Component {
+  render() {
+    const date = new Date();
+    const hours = date.getHours();
+    let timeOfDay;
 
-  if (hours < 12) {
-    timeOfDay = "morning";
-  } else if (hours >= 12 && hours < 17) {
-    timeOfDay = "afternoon";
-  } else {
-    timeOfDay = "night";
+    if (hours < 12) {
+      timeOfDay = "morning";
+    } else if (hours >= 12 && hours < 17) {
+      timeOfDay = "afternoon";
+    } else {
+      timeOfDay = "night";
+    }
+    return <h1>Good {timeOfDay} to you, sir or madam!</h1>;
   }
-  return <h1>Good {timeOfDay} to you, sir or madam!</h1>;
 }
-
 // ReactDom.render(What do I want to render, where do I want to render it);
 ReactDom.render(<App />, document.getElementById("root"));
