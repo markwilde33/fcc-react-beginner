@@ -1,23 +1,29 @@
-// working with event handling in react
+// working with (changing) states in react
 
 import React from "react";
 
-function onClick() {
-  console.log("say hello to my little friend");
-}
-
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      count: 0,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState((prevState) => {
+      return {
+        count: prevState.count + 1,
+      };
+    });
+  }
+
   render() {
     return (
       <div>
-        <img
-          onMouseOver={() => console.log("Bill is a good man")}
-          src="https://www.fillmurray.com/200/100"
-          alt="Bill Murray"
-        />
-        <br />
-        <br />
-        <button onClick={onClick}>Click me</button>
+        <h1>{this.state.count}</h1>
+        <button onClick={this.handleClick}>Change</button>
       </div>
     );
   }
