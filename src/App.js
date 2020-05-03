@@ -9,20 +9,39 @@ class TodoList extends Component {
     this.state = {};
   }
 
+  static getDerivedStateFromProps(props, state) {
+    // return the new, updated state based upon the props
+    // https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops
+    // https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
+  }
+
+  getSnapshotBeforeUpdate() {
+    // create a backup of the current way things are
+    // https://reactjs.org/docs/react-component.html#getsnapshotbeforeupdate
+  }
+
+  // componentWillMount() {
+
+  // }
+
   componentDidMount() {
     // GET the data I need to correctly display
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.whatever !== this.props.whatever) {
-      // do something important here
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //     if (nextProps.whatever !== this.props.whatever) {
+  //         // do something important here
+  //     }
+  // }
 
   shouldComponentUpdate(nextProps, nextState) {
     // return true if want it to update
     // return false if not
   }
+
+  // componentWillUpdate() {
+
+  // }
 
   componentWillUnmount() {
     // teardown or cleanup your code before your component disappears
