@@ -1,21 +1,29 @@
-import React, { Component } from "react";
-import Conditional from "./components/Conditional";
+import React from "react";
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      unreadMessages: [],
+      isLoggedIn: true,
     };
+    this.handleClick = this.handleClick.bind(this);
   }
-  // &&
-  // false && false
+  handleClick() {
+    this.setState((prevState) => {
+      return {
+        isLoggedIn: !prevState.isLoggedIn,
+      };
+    });
+  }
   render() {
+    let btnText = this.state.isLoggedIn ? "Log Out" : "Log In";
+    let userMessage = this.state.isLoggedIn
+      ? "You are now logged in"
+      : "You are now logged out";
     return (
       <div>
-        {this.state.unreadMessages.length > 0 && (
-          <h2>You have {this.state.unreadMessages.length} unread messages!</h2>
-        )}
+        <button onClick={this.handleClick}>{btnText}</button>
+        <h2>{userMessage}</h2>
       </div>
     );
   }

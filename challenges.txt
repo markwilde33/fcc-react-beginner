@@ -118,3 +118,16 @@ Challenge 12
  handleChange(id)
  // Update state so that the item with the given id flips `completed` from false to true (or vise versa)
         // Remember not to modify prevState directly, but instead to return a new version of state with the change you want included in that update. (Think how you might use the `.map` method to do this)
+
+
+Challenge 13
+
+Given a stateless functional component:
+1. Follow the steps necessary to add state to it,
+    // class-based component
+    // constructor method
+2. Have state keep track of whether the user is logged in or not
+3. Add a button that logs the user in/out
+    a. extra challenge - make the button display "log in" if they're not logged in and "log out" if they are
+4. Display text that says "Logged in" if the user is logged in, or "Logged out" if they're not.
+*/
