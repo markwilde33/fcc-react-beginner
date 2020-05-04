@@ -4,34 +4,39 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      loading: false,
-      character: {},
+      firstName: "",
+      lastName: "",
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  componentDidMount() {
-    this.setState({ loading: true });
-    fetch("https://anapioficeandfire.com/api/characters/100")
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({
-          loading: false,
-          character: data,
-        });
-        console.log(data);
-      });
+  handleChange(event) {
+    this.setState({
+      firstName: event.target.value,
+      lastName: event.target.value,
+    });
+    console.log(this.state.firstName);
   }
 
   render() {
-    const output =
-      this.state.loading === true
-        ? "Please stand by"
-        : this.state.character.name;
     return (
       <div>
-        <br />
-        <h1>Code goes here</h1>
-        <h3 style={{ color: "blue" }}>{output}</h3>
+        <h2>Code goes here</h2>
+        <form>
+          <input
+            type="text"
+            placeholder="First Name"
+            onChange={this.handleChange}
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            onChange={this.handleChange}
+          />
+          <h2>
+            {this.state.firstName} {this.state.firstName}
+          </h2>
+        </form>
       </div>
     );
   }
