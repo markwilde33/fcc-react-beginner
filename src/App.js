@@ -1,36 +1,39 @@
-import React from "react";
-import TodoItem from "./components/TodoItem";
-import todosData from "./components/todosData";
+import React, { Component } from "react";
 
-class App extends React.Component {
+class App extends Component {
   constructor() {
     super();
     this.state = {
-      todos: todosData,
+      loading: false,
+      character: {},
     };
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(id) {
-    this.setState((prevState) => {
-      const updatedTodos = prevState.todos.map((todo) => {
-        if (todo.id === id) {
-          todo.completed = !todo.completed;
-        }
-        return todo;
+  componentDidMount() {
+    this.setState({ loading: true });
+    fetch("https://anapioficeandfire.com/api/characters/100")
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({
+          loading: false,
+          character: data,
+        });
+        console.log(data);
       });
-      return {
-        todos: updatedTodos,
-      };
-    });
   }
 
   render() {
-    const todoItems = this.state.todos.map((item) => (
-      <TodoItem key={item.id} item={item} handleChange={this.handleChange} />
-    ));
-
-    return <div className="todo-list">{todoItems}</div>;
+    const output =
+      this.state.loading === true
+        ? "Please stand by"
+        : this.state.character.name;
+    return (
+      <div>
+        <br />
+        <h1>Code goes here</h1>
+        <h3 style={{ color: "blue" }}>{output}</h3>
+      </div>
+    );
   }
 }
 
